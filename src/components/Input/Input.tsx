@@ -6,15 +6,15 @@ const Input = () => {
     const [weight, setWeight] = useState("")
     const [bmimsg , setBmiMsg] = useState("")
     const [isHidden, setIsHidden] = useState(false)
-    const handleHeight = (e) =>{
+    const handleHeight = (e: React.ChangeEvent<HTMLInputElement>) =>{
         setHeight(e.target.value)
     }
 
-    const handleWeight = (e) =>{
+    const handleWeight = (e: React.ChangeEvent<HTMLInputElement>) =>{
       setWeight(e.target.value)
   }
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
     e.preventDefault()
     console.log(weight,height)
     if( weight && height != ""){
@@ -41,7 +41,7 @@ const Input = () => {
 
   }
 
-  const handleTryButton = (e) =>{
+  const handleTryButton = (e: React.MouseEvent<HTMLButtonElement>) =>{
     e.preventDefault()
     setIsHidden(false)
     setHeight('')
