@@ -5,8 +5,8 @@ import './App.css'
 
 const App = () => {
   return (
+    
     <div className='main-container'>
-      
       <Header />
       <Input />
     </div>
